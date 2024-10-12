@@ -1,0 +1,176 @@
+body {
+	background: #1a1716;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: white;
+	font-family: Montserrat-Regular;
+	font-size: 20px;
+	margin: 65px;
+	text-align: center;
+}
+
+nav {
+	margin: 25px;
+	display: flex;
+	column-gap: 45px;
+	justify-content: center;
+	font-family: Montserrat-SemiBold;
+}
+
+b {
+	font-family: "Montserrat-SemiBold";
+}
+
+h1 {
+	font-family: "Montserrat-SemiBold";
+	text-transform: uppercase;
+}
+
+.banner {
+	width: 400px;
+	margin: auto;
+	display: block;
+}
+
+.intro-box {
+	border-radius: 25px;
+	background: radial-gradient(#343333, #646363);
+	display: inline-flex;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin: auto;
+	width: 650px;
+	animation-name: blurin;
+	animation-duration: 1s;
+}
+
+#fav {
+	width: 127px;
+	height: 130px;
+	display: block;
+}
+
+.navlink {
+	color: white;
+	transition: all ease 0.4s;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+}
+
+.navlink:hover {
+	letter-spacing: 2px;
+	color: #adadad;
+}
+
+.social {
+	margin: 5px;
+	display: inline-grid;
+	transition: all ease 0.4s;
+	justify-content: center;
+	width: 48px;
+}
+
+.social:hover {
+	transform: scale(0.95, 0.95);
+	opacity: 0.8;
+}
+
+.review-box {
+	display: inline-grid;
+	width: 500px;
+	margin: 50px;
+	padding: 5px;
+	animation-name: slidein;
+	animation-duration: 1s;
+}
+
+.work-box {
+	display: inline-grid;
+}
+
+.gallery {
+	display: inline-flex;
+	column-gap: 25px;
+	row-gap: 25px;
+	margin-bottom: 30px;
+	align-items: end;
+	justify-content: center;
+}
+
+.gallery-item {
+	display: inline-grid;
+	width: 360px;
+	transition: all ease 0.4s;
+	border: white 2px solid;
+}
+
+.gallery-item2 {
+	transition: all ease 0.4s;
+	display: inline-grid;
+	border: white 2px solid;
+	width: 325px;
+}
+
+.gallery-item:hover {
+	transform: scale(0.95, 0.95);
+	opacity: 0.5;
+}
+
+.gallery-item2:hover {
+	transform: scale(0.95, 0.95);
+	opacity: 0.5;
+}
+
+.quote::before {
+	content: "\275D";
+	font-size: 22px;
+}
+
+.quote::after {
+	content: "\275E";
+	font-size: 22px;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("font/Montserrat-Light.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url("font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat-SemiBold";
+	src: url("font/Montserrat-SemiBold.ttf");
+}
+
+@keyframes blurin {
+	from {
+	   transform: scale(0.95);
+	   filter: blur(5px);
+	   opacity: 0;
+	}
+	
+	to {
+	   transform: scale(1);
+	   filter: blur(0px);
+	   opacity: 1;
+	}
+}
+
+@keyframes slidein {
+	from {
+		transform: translate(0px, 15px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+		
