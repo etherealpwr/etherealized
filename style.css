@@ -99,30 +99,6 @@ h1 {
 	justify-content: center;
 }
 
-.gallery-item {
-	display: inline-grid;
-	width: 360px;
-	transition: all ease 0.4s;
-	border: white 2px solid;
-}
-
-.gallery-item2 {
-	transition: all ease 0.4s;
-	display: inline-grid;
-	border: white 2px solid;
-	width: 325px;
-}
-
-.gallery-item:hover {
-	transform: scale(0.95, 0.95);
-	opacity: 0.5;
-}
-
-.gallery-item2:hover {
-	transform: scale(0.95, 0.95);
-	opacity: 0.5;
-}
-
 .quote::before {
 	content: "\275D";
 	font-size: 22px;
@@ -173,4 +149,3 @@ h1 {
 		opacity: 1;
 	}
 }
-		
