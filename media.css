@@ -1,0 +1,97 @@
+@import "style.css";
+
+@media (max-width: 835px) {
+	.gallery {
+		flex-direction: column;
+		column-gap: 0px;
+	}
+	.intro-box {
+		flex-direction: column;
+		width: 245px;
+	}
+
+	#fav {
+		width: 147px;
+		height: 150px;
+		margin: auto;
+	}
+
+	.banner {
+		width: 300px;
+	}
+	.nav {
+		column-gap: 30px;
+		margin: 15px;
+	}
+	.review-box {
+		width: 290px;
+		margin: 0;
+	}
+  }
+
+@media (max-width: 420px) {
+	.gallery {
+		column-gap: 0px;
+		margin-bottom: 25px;
+	}
+
+	.intro-box {
+		flex-direction: column;
+		padding: 20px;
+		width: 220px;
+	}
+
+	#fav {
+		width: 150px;
+		height: 153px;
+		margin: auto;
+	}
+
+	.banner {
+		width: 250px;
+	}
+	.navlink {
+		flex: 20%;
+	}
+	.review-box {
+		width: 250px;
+		font-size: 18px;	
+	}
+	.social {
+		width: 36px;
+		margin: 10px;
+	}
+	h1 {
+		font-size: 32px;
+	}
+  }
+
+@media (max-width: 370px) {
+    .social {
+        width: 22px;
+        margin: 15px;
+    }
+
+    .banner {
+        width: 225px;
+    }
+
+    .nav {
+        column-gap: 15px;
+        flex-wrap: column wrap;
+    }
+
+    .intro-box {
+        width: 205px;
+    }
+
+    #fav {
+        width: 157px;
+        height: 160px;
+    }
+
+    .review-box {
+        width: 205px;
+        font-size: 16px;
+    }
+}
