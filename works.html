@@ -6,6 +6,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="media.css">
+		<link rel="stylesheet" href="gallery.css">
 		<link rel="icon" href="img/fav.ico">
 		</head>
 	<body>
@@ -20,30 +21,39 @@
 			<div>
 				<h1>Grafikos darbų pavyzdžiai</h1>
 					<div class="gallery">
-						<a href="img/darbai/kailloytbanner2.png" target="_blank">
-							<img class="gallery-item2" src="img/darbai/kailloytbanner2.png">
-						</a>
-						<a href="img/darbai/rudensrinkinys.png" target="_blank">
-							<img class="gallery-item" src="img/darbai/rudensrinkinys.png">
-						</a>
-						<a href="img/darbai/gytisthumb2.png" target="_blank">
-							<img class="gallery-item2" src="img/darbai/gytisthumb2.png">
-						</a>
+							<img id="myImg" class="myImages" width="325" src="img/darbai/kailloytbanner2.png">
+							<img id="myImg" class="myImages" width="360" src="img/darbai/rudensrinkinys.png">
+							<img id="myImg" class="myImages" width="325" src="img/darbai/gytisthumb2.png">
 						</div>
 					<div class="gallery">
-						<a href="img/darbai/mad_rp_logo_subg_2.png" target="_blank">
-							<img class="gallery-item2" src="img/darbai/mad_rp_logo_subg_2.png">
-						</a>
-						<a href="img/darbai/etlogo.png" target="_blank">
-							<img class="gallery-item" src="img/darbai/etlogo.png">
-						</a>
-						<a href="img/darbai/ethlogoii.png" target="_blank">
-							<img class="gallery-item2" src="img/darbai/ethlogoii.png">
-						</a>
+							<img id="myImg" class="myImages" width="325" src="img/darbai/mad_rp_logo_subg_2.png">
+							<img id="myImg" class="myImages" width="360" src="img/darbai/etlogo.png">
+							<img id="myImg" class="myImages" width="325" src="img/darbai/ethlogoii.png">
 						</div>
-					</div>
 				</div>
 			</div>
+		    <div id="myModal" class="modal">
+			    <span class="close">&times;</span>
+			    <img class="modal-content" id="img01">
+			</div>
+			<script>
+				var modal = document.getElementById('myModal');
+				var images = document.getElementsByClassName('myImages');
+				var modalImg = document.getElementById("img01");
+				
+				for (var i = 0; i < images.length; i++) {
+					var img = images[i];
+					img.onclick = function(evt) {
+						modal.style.display = "block";
+						modalImg.src = this.src;
+					}
+				}
+				var span = document.getElementsByClassName("close")[0];
+				
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+			</script>
 			<footer style="margin-top:25px;">
 			   <div class="social">
 				   <a href="https://facebook.com">
@@ -51,7 +61,7 @@
 				   </a>
 			   </div>
 			   <div class="social">
-				   <a href="https://instagram.com">
+				   <a href="https://instagram.com/etherealizedgfx">
 					   <img src="img/instagram.png">
 				   </a>
 			   </div>
