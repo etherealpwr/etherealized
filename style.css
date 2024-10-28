@@ -1,12 +1,38 @@
 body {
 	background: #1a1716;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 	color: white;
 	font-family: Montserrat-Regular;
 	font-size: 20px;
 	margin: 65px;
 	text-align: center;
+}
+button {
+	border-radius: 30px;
+	background: linear-gradient(45deg, #252525, #3e3e3e);
+	color: white;
+	width: 165px;
+	font-family: Montserrat-Regular;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	margin-top: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px #1a1716;
+	transition: all ease-in 0.2s;
+}
+
+#fav {
+	width: 127px;
+	height: 130px;
+}
+
+button:hover {
+	opacity: 0.5;
+	transform: scale(0.95, 0.95)
 }
 
 nav {
@@ -36,20 +62,25 @@ h1 {
 	border-radius: 25px;
 	background: radial-gradient(#343333, #646363);
 	display: inline-flex;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin: auto;
-	width: 650px;
+	padding: 20px;
+	margin: 10px;
+	align-items: center;
 	animation-name: blurin;
 	animation-duration: 1s;
+	width: 650px;
 }
 
-#fav {
-	width: 127px;
-	height: 130px;
-	display: block;
+.promo-box {
+	border-radius: 25px;
+	background: radial-gradient(#343333, #646363);
+	display: inline-flex;
+	padding: 20px;
+	margin: 10px;
+	align-items: center;
+	animation-name: blurin;
+	animation-duration: 1s;
+	width: 295px;
+	flex-direction: column;
 }
 
 .navlink {
@@ -65,7 +96,7 @@ h1 {
 }
 
 .social {
-	margin: 5px;
+	margin: 4px;
 	display: inline-grid;
 	transition: all ease 0.4s;
 	justify-content: center;
@@ -84,10 +115,6 @@ h1 {
 	padding: 5px;
 	animation-name: slidein;
 	animation-duration: 1s;
-}
-
-.work-box {
-	display: inline-grid;
 }
 
 .gallery {

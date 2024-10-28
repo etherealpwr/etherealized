@@ -2,27 +2,33 @@
 
 @media (max-width: 835px) {
 	.gallery {
-		flex-direction: column;
+		display: grid;
 		column-gap: 0px;
+		margin-bottom: 35px;
 	}
 	.intro-box {
 		flex-direction: column;
-		width: 245px;
+		width: 270px;
+	}
+
+	.promo-box {
+		width: 270px;
 	}
 
 	#fav {
-		width: 147px;
-		height: 150px;
+		width: 185px;
+		height: 187px;
 		margin: auto;
 	}
 
 	.banner {
 		width: 300px;
 	}
-	.nav {
-		column-gap: 30px;
-		margin: 15px;
+
+	.navlink {
+		margin: 10px;
 	}
+
 	.review-box {
 		width: 290px;
 		margin: 0;
@@ -31,14 +37,18 @@
 
 @media (max-width: 420px) {
 	.gallery {
-		column-gap: 0px;
 		margin-bottom: 25px;
 	}
 
 	.intro-box {
 		flex-direction: column;
-		padding: 20px;
-		width: 220px;
+		padding: 15px;
+		width: 230px;
+	}
+
+	.promo-box {
+		width: 230px;
+		padding: 15px;
 	}
 
 	#fav {
@@ -50,9 +60,11 @@
 	.banner {
 		width: 250px;
 	}
+
 	.navlink {
-		flex: 20%;
+		margin: 0;
 	}
+
 	.review-box {
 		width: 250px;
 		font-size: 18px;	
@@ -66,24 +78,22 @@
 	}
   }
 
-@media (max-width: 370px) {
-    .social {
-        width: 22px;
-        margin: 15px;
-    }
+@media (max-width: 390px) {
+	.social {
+		margin: 12px;
+	}
 
     .banner {
         width: 225px;
     }
 
-    .nav {
-        column-gap: 15px;
-        flex-wrap: column wrap;
+    .intro-box {
+        width: 180px;
     }
 
-    .intro-box {
-        width: 205px;
-    }
+	.promo-box {
+		width: 180px;
+	}
 
     #fav {
         width: 157px;
