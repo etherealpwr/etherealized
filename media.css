@@ -2,17 +2,17 @@
 
 @media (max-width: 835px) {
 	.gallery {
-		display: grid;
-		column-gap: 0px;
+		column-gap: 10px;
 		margin-bottom: 35px;
 	}
+
 	.intro-box {
 		flex-direction: column;
-		width: 270px;
+		width: 370px;
 	}
 
 	.promo-box {
-		width: 270px;
+		width: 370px;
 	}
 
 	#fav {
@@ -37,6 +37,7 @@
 
 @media (max-width: 420px) {
 	.gallery {
+		flex-direction: column;
 		margin-bottom: 25px;
 	}
 
@@ -61,10 +62,6 @@
 		width: 250px;
 	}
 
-	.navlink {
-		margin: 0;
-	}
-
 	.review-box {
 		width: 250px;
 		font-size: 18px;	
@@ -75,6 +72,10 @@
 	}
 	h1 {
 		font-size: 32px;
+	}
+	nav {
+		column-gap: 0px;
+		margin: 10px;
 	}
   }
 

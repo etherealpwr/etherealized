@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html>
 	<head>
 	    <title>etherealized.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="media.css">
-		<script src="script.js"></script>
 		<link rel="icon" type="image/x-icon" href="img/fav.ico">
 		</head>
 	<body>
 	    	<header>
 	    		<img src="img/banner.png" class="banner">
 	    		<nav>
-	    			<a href="index.html" class="navlink">Apie</a>
-	    			<a href="reviews.html" class="navlink">Atsiliepimai</a>
-	    			<a href="works.html" class="navlink">Portfelis</a>
+	    			<a href="index.html" class="navlink">
+						<span lang="en">About</span>
+						<span lang="lt">Apie</span>
+					</a>
+	    			<a href="reviews.html" class="navlink">
+						<span lang="en">Reviews</span>
+						<span lang="lt">Atsiliepimai</span>
+					</a>
+	    			<a href="works.html" class="navlink">
+						<span lang="en">Portfolio</span>
+						<span lang="lt">Portfelis</span>
+					</a>
+						<select id="lang-switch">
+							<option value="lt">lietuvių</option>
+							<option value="en">English</option>
+						</select>
 	    		</nav>
 	    	</header>
 	    	<div class="intro-box">
 	    		<img src="img/fav.png" id="fav">
-	    		<p><b>etherealized.</b> - „Discord“ bendruomenė, kuri specializuojasi aukštos kokybės GFX dizainų pardavimu, moko kitus ir siekia sukurti kūrybingą bei draugišką sandraugą.</p>
+					<p lang="en"><b>etherealized.</b> is a Discord server designed for purchasing high-end GFX designs, learning from experts and making a community based on creativity.</p>
+					<p lang="lt"><b>etherealized.</b> - „Discord“ bendruomenė, kuri specializuojasi aukštos kokybės GFX dizainų pardavimu, moko kitus ir siekia sukurti kūrybingą bei draugišką sandraugą.</p>
 	    	</div>
 			<br>
 			<div class="promo-box">
-				<p>Paremk mumis „Contribee“ platformoje!</p>
+					<p lang="en">Support us on Contribee!</p>
+					<p lang="lt">Paremk mumis „Contribee“ platformoje!</p>
 				<img src="img/contribee.png" style="width:96px;">
-				<button type="button" onclick="location.href='https://contribee.com/etherealized'">Paremti</button>
+				<button type="button" onclick="location.href='https://contribee.com/etherealized'">
+					<span lang="en">Support</span>
+					<span lang="lt">Paremti</span>
+				</button>
 			</div>
 			<div class="promo-box">
-				<p>Prisijunk prie mūsų „Discord“ serverio!</p>
+					<p lang="en">Join our Discord server!</p>
+					<p lang="lt">Prisijunk prie mūsų „Discord“ serverio!</p>
 				<img src="img/discord.png" style="width:96px;">
-				<button type="button" onclick="location.href='https://discord.gg/gfatw9wrgU'">Prisijungti</button>
+				<button type="button" onclick="location.href='https://discord.gg/gfatw9wrgU'">
+					<span lang="en">Join</span>
+					<span lang="lt">Prisijungti</span>
+				</button>
 			</div>
 			<footer style="margin-top:25px;">
 				 <a class="social" href="https://facebook.com">
@@ -43,7 +64,27 @@
 			    <a class="social" href="https://youtube.com">
 				        <img src="img/youtube.png">
 			       </a>
-			    <p style="text-align:center; text-transform:uppercase; font-style:italic;">Visos teisės saugomos.</p>
+			    <p style="text-align:center; text-transform:uppercase; font-style:italic;">
+					<span lang="lt">Visos teisės saugomos.</span>
+					<span lang="en">All rights reserved.</span>
+				</p>
 			</footer>
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+			<script>
+				$('[lang]').hide()
+				$('[lang="lt"]').show()
+				$('#lang-switch').change(function() {
+					var lang = $(this).val();
+					switch (lang) {
+						case 'en':
+							$('[lang]').hide();
+							$('[lang="en"]').show();
+						break;
+						case 'lt':
+							$('[lang]').hide();
+							$('[lang="lt"]').show();
+					}
+				});
+			</script>
 	</body>
     </html>
