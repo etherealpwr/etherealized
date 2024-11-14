@@ -70,29 +70,6 @@
 				</p>
 			</footer>
 			<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-			<script>
-				$('[lang]').hide()
-				$('[lang="lt"]').show()
-				$('#lang-switch').change(function() {
-					var lang = $(this).val();
-					switch (lang) {
-						case 'en':
-							$('[lang]').hide();
-							$('[lang="en"]').show();
-						break;
-						case 'lt':
-							$('[lang]').hide();
-							$('[lang="lt"]').show();
-					}
-				});
-				$(function() {
-					$('#lang-switch').change(function() {
-						localStorage.setItem('[lang]', this.value);
-					});
-					if(localStorage.getItem('[lang]')){
-						$('#lang-switch').val(localStorage.getItem('[lang]'));
-					}
-				});
-			</script>
+			<script src="script/lang.js"></script>
 	</body>
     </html>
