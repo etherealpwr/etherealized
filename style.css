@@ -15,6 +15,11 @@ select {
 	font-size: 20px;
 }
 
+option {
+	background-color: #1a1716;
+	border: none !important;
+}
+
 button {
 	border-radius: 30px;
 	background: linear-gradient(45deg, #252525, #3e3e3e);

@@ -85,6 +85,14 @@
 							$('[lang="lt"]').show();
 					}
 				});
+				$(function() {
+					$('#lang-switch').change(function() {
+						localStorage.setItem('[lang]', this.value);
+					});
+					if(localStorage.getItem('[lang]')){
+						$('#lang-switch').val(localStorage.getItem('[lang]'));
+					}
+				});
 			</script>
 	</body>
     </html>
