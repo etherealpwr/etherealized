@@ -35,6 +35,23 @@
 	}
   }
 
+@media(max-width:500px) {
+	.intro-box {
+		width: 285px;
+	}
+	.promo-box {
+		width: 285px;
+	}
+	nav {
+		column-gap: 0;
+		margin: 15px;
+	}
+	.gallery {
+		flex-direction: column;
+		margin-bottom: 30px;
+	}
+}
+
 @media (max-width: 420px) {
 	.gallery {
 		flex-direction: column;
