@@ -1,14 +1,13 @@
-$('[lang]').hide()
-				$('[lang="lt"]').show()
-				$('#lang-switch').change(function() {
-					var lang = $(this).val();
-					switch (lang) {
-						case 'en':
-							$('[lang]').hide();
-							$('[lang="en"]').show();
-						break;
-						case 'lt':
-							$('[lang]').hide();
-							$('[lang="lt"]').show();
-					}
-				});
+$(document).ready(function () {
+    var savedLang = localStorage.getItem('selectedLanguage') || 'lt';
+    $('[lang]').hide();
+    $('[lang="' + savedLang + '"]').show();
+    $('#lang-switch').val(savedLang);
+});
+
+$('#lang-switch').change(function () {
+    var lang = $(this).val();
+    localStorage.setItem('selectedLanguage', lang);
+    $('[lang]').hide();
+    $('[lang="' + lang + '"]').show();
+});
