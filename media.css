@@ -1,125 +1,213 @@
-@import "style.css";
-
-@media (max-width: 835px) {
-	.gallery {
-		column-gap: 10px;
-		margin-bottom: 35px;
-	}
-
-	.intro-box {
-		flex-direction: column;
-		width: 370px;
-	}
-
-	.promo-box {
-		width: 370px;
-	}
-
-	#fav {
-		width: 185px;
-		height: 187px;
-		margin: auto;
-	}
-
-	.banner {
-		width: 300px;
-	}
-
-	.navlink {
-		margin: 10px;
-	}
-
-	.review-box {
-		width: 290px;
-		margin: 0;
-	}
-  }
-
-@media(max-width:585px) {
-	.intro-box {
-		width: 285px;
-	}
-	.promo-box {
-		width: 285px;
-	}
-	nav {
-		column-gap: 0;
-		margin: 15px;
-	}
-	.gallery {
-		flex-direction: column;
-		margin-bottom: 30px;
-	}
+/* Import the Konnect font */
+@font-face {
+    font-family: "Konnect";
+    src: url("font/Konnect-Regular.otf") format("onetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (max-width: 420px) {
-	.gallery {
-		flex-direction: column;
-		margin-bottom: 25px;
-	}
+@font-face {
+    font-family: "Konnect-SemiBold";
+    src: url("font/Konnect-SemiBold.otf") format("onetype");
+    font-weight: 600;
+    font-style: normal;
+}
 
-	.intro-box {
-		flex-direction: column;
-		padding: 15px;
-		width: 230px;
-	}
+@font-face {
+    font-family: "Konnect-Bold";
+    src: url("font/Konnect-Bold.otf") format("onetype");
+    font-weight: bold;
+    font-style: normal;
+}
 
-	.promo-box {
-		width: 230px;
-		padding: 15px;
-	}
+body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: "Konnect", sans-serif;
+    font-size: 20px;
+    margin: 65px;
+    text-align: center;
+}
 
-	#fav {
-		width: 150px;
-		height: 153px;
-		margin: auto;
-	}
+select {
+    background: none;
+    border: 1px solid #21262d;
+    color: #c9d1d9;
+    font-family: "Konnect-SemiBold", sans-serif;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-	.banner {
-		width: 250px;
-	}
+select:hover {
+    border-color: #58a6ff;
+    box-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+}
 
-	.review-box {
-		width: 250px;
-		font-size: 18px;	
-	}
-	.social {
-		width: 36px;
-		margin: 10px;
-	}
-	h1 {
-		font-size: 32px;
-	}
-	nav {
-		column-gap: 0px;
-		margin: 10px;
-	}
-  }
+option {
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: none !important;
+}
 
-@media (max-width: 390px) {
-	.social {
-		margin: 12px;
-	}
+button {
+    border-radius: 30px;
+    background: linear-gradient(135deg, #1f6feb, #58a6ff);
+    color: #ffffff;
+    width: auto;
+    font-family: "Konnect-Regular", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin-top: 25px;
+    padding: 14px 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
 
-    .banner {
-        width: 225px;
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.8);
+}
+
+#fav {
+    width: 127px;
+    height: 130px;
+}
+
+nav {
+    margin: 25px;
+    display: flex;
+    column-gap: 45px;
+    justify-content: center;
+    font-family: "Konnect-SemiBold", sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+b {
+    font-family: "Konnect-SemiBold", sans-serif;
+}
+
+h1 {
+    font-family: "Konnect-SemiBold", sans-serif;
+    text-transform: uppercase;
+    color: #58a6ff;
+    letter-spacing: 1.5px;
+}
+
+.banner {
+    width: 400px;
+    margin: auto;
+    display: block;
+}
+
+.intro-box,
+.promo-box {
+    border-radius: 25px;
+    background: linear-gradient(135deg, #21262d, #30363d);
+    display: inline-flex;
+    padding: 20px 30px;
+    margin: 15px;
+    align-items: center;
+    animation: blurin 1s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.intro-box {
+    width: 700px;
+}
+
+.promo-box {
+    width: 300px;
+    flex-direction: column;
+}
+
+.navlink {
+    color: #58a6ff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navlink:hover {
+    color: #79c0ff;
+    background: rgba(88, 166, 255, 0.1);
+    text-shadow: none;
+    letter-spacing: normal;
+}
+
+.social {
+    margin: 4px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    justify-content: center;
+    width: 48px;
+}
+
+.social:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.review-box {
+    display: inline-grid;
+    width: 500px;
+    margin: 50px auto;
+    padding: 15px 20px;
+    animation: slidein 1s ease;
+    border: 1px solid #21262d;
+    border-radius: 15px;
+    background: #161b22;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.quote::before,
+.quote::after {
+    color: #58a6ff;
+    font-size: 24px;
+}
+
+.highlight {
+    color: rgba(88, 166, 255, 0.8);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+@keyframes blurin {
+    from {
+        transform: scale(0.95);
+        filter: blur(5px);
+        opacity: 0;
     }
-
-    .intro-box {
-        width: 180px;
+    to {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1;
     }
+}
 
-	.promo-box {
-		width: 180px;
-	}
-
-    #fav {
-        width: 157px;
-        height: 160px;
+@keyframes slidein {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
     }
-
-    .review-box {
-        width: 205px;
-        font-size: 16px;
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
